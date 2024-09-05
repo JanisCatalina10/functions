@@ -19,7 +19,7 @@
     function pintar(ele, color) {
         ele.style.backgroundColor = color; 
     }
+    pintar(ele, 'green');
     ele.addEventListener("click", () => {
-        pintar(ele, 'green');  
+        pintar(ele, 'yellow');  
     }); 
-        
