@@ -3,6 +3,7 @@ function defaultCube(elementId, initialColor, clickColor){
             cube.style.backgroundColor = initialColor;
             cube.style.width = "200px";
             cube.style.height = "200px";
+            cube.style.margin = "20px";
             
             cube.addEventListener("click", () => {
                 cube.style.backgroundColor = clickColor;
@@ -17,8 +18,9 @@ const whiteCube = document.getElementById("border-cube");
 function applyDefaultStyles() {
     whiteCube.style.backgroundColor = "white"; 
     whiteCube.style.border = `2px solid black`;
-    whiteCube.style.width = "200px"
-    whiteCube.style.height = "200px"
+    whiteCube.style.width = "200px";
+    whiteCube.style.height = "200px";
+    whiteCube.style.margin = "20px";
 
     document.addEventListener('keydown', function (event) {
         if (event.key === 'a') {
@@ -42,16 +44,19 @@ document.addEventListener('keydown', event => {
             purpleCube.style.backgroundColor = "purple";
             purpleCube.style.width = "200px";
             purpleCube.style.height = "200px";
+            purpleCube.style.margin = "20px";
             break;
             case 'w':
                 grayCube.style.backgroundColor = "gray";
                 grayCube.style.width = "200px";
                 grayCube.style.height = "200px";
+                purpleCube.style.margin = "20px";
                 break;
                 case 'e':
                 brownCube.style.backgroundColor = "brown";
                 brownCube.style.width = "200px";
                 brownCube.style.height = "200px";
+                purpleCube.style.margin = "20px";
                 break;
     }
 })
