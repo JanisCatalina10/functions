@@ -14,6 +14,9 @@ function defaultCube(elementId, initialColor, clickColor){
         defaultCube("cube3", "green", "black");
         defaultCube("cube4", "yellow", "black");
 
+
+
+//CUBO BLANCO QUE CAMBIA DE COLOR
 const whiteCube = document.getElementById("border-cube");
 function applyDefaultStyles() {
     whiteCube.style.backgroundColor = "white"; 
@@ -34,36 +37,36 @@ function applyDefaultStyles() {
 }
 applyDefaultStyles();
 
-const purpleCube = document.createElement('div');
-const grayCube = document.createElement('div');
-const brownCube = document.createElement('div');
+
+
+//CREACION DE NUEVOS CUBOS
+function createCube(color) {
+    const cube = document.createElement('div');
+    cube.style.backgroundColor = color;
+    cube.style.width = "200px";
+    cube.style.height = "200px";
+    cube.style.margin = "20px";
+    return cube;
+}
 
 document.addEventListener('keydown', event => {
+    let newCube;
+
     switch(event.key){
         case 'q':
-            purpleCube.style.backgroundColor = "purple";
-            purpleCube.style.width = "200px";
-            purpleCube.style.height = "200px";
-            purpleCube.style.margin = "20px";
+            newCube = createCube("purple"); 
             break;
-            case 'w':
-                grayCube.style.backgroundColor = "gray";
-                grayCube.style.width = "200px";
-                grayCube.style.height = "200px";
-                purpleCube.style.margin = "20px";
-                break;
-                case 'e':
-                brownCube.style.backgroundColor = "brown";
-                brownCube.style.width = "200px";
-                brownCube.style.height = "200px";
-                purpleCube.style.margin = "20px";
-                break;
+        case 'w':
+            newCube = createCube("gray"); 
+            break;
+        case 'e':
+            newCube = createCube("brown"); 
+            break;
     }
-})
-document.body.appendChild(purpleCube);
-document.body.appendChild(grayCube);
-document.body.appendChild(brownCube);
 
 
-
+    if (newCube) {
+        document.body.appendChild(newCube);
+    }
+});
 
