@@ -19,7 +19,46 @@ function applyDefaultStyles() {
     whiteCube.style.border = `2px solid black`;
     whiteCube.style.width = "200px"
     whiteCube.style.height = "200px"
+
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'a') {
+            whiteCube.style.backgroundColor = "pink";
+            } else if (event.key === 's') {
+                whiteCube.style.backgroundColor = "orange";
+            } else if (event.key === 'd') {
+                whiteCube.style.backgroundColor = "lightblue" ;
+            }
+    })
 }
 applyDefaultStyles();
+
+const purpleCube = document.createElement('div');
+const grayCube = document.createElement('div');
+const brownCube = document.createElement('div');
+
+document.addEventListener('keydown', event => {
+    switch(event.key){
+        case 'q':
+            purpleCube.style.backgroundColor = "purple";
+            purpleCube.style.width = "200px";
+            purpleCube.style.height = "200px";
+            break;
+            case 'w':
+                grayCube.style.backgroundColor = "gray";
+                grayCube.style.width = "200px";
+                grayCube.style.height = "200px";
+                break;
+                case 'e':
+                brownCube.style.backgroundColor = "brown";
+                brownCube.style.width = "200px";
+                brownCube.style.height = "200px";
+                break;
+    }
+})
+document.body.appendChild(purpleCube);
+document.body.appendChild(grayCube);
+document.body.appendChild(brownCube);
+
+
 
 
