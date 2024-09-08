@@ -1,3 +1,5 @@
+
+//4 CUBOS INICIALES
 function defaultCube(elementId, initialColor, clickColor){
     const cube = document.getElementById(elementId);
             cube.style.backgroundColor = initialColor;
@@ -20,7 +22,7 @@ function defaultCube(elementId, initialColor, clickColor){
 const whiteCube = document.getElementById("border-cube");
 function applyDefaultStyles() {
     whiteCube.style.backgroundColor = "white"; 
-    whiteCube.style.border = `2px solid black`;
+    whiteCube.style.border = "2px solid black";
     whiteCube.style.width = "200px";
     whiteCube.style.height = "200px";
     whiteCube.style.margin = "20px";
@@ -63,7 +65,6 @@ document.addEventListener('keydown', event => {
             newCube = createCube("brown"); 
             break;
     }
-
 
     if (newCube) {
         document.body.appendChild(newCube);
